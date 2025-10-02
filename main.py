@@ -24,8 +24,9 @@ def search_customEvars():
 
 #Fonction pour trouver le TRIgramme
 def get_trigram():
-    pattern = re.compile(r'^([A-Z]{3})')
+    pattern = re.compile(r'^([a-z]{3}).*000$')
     folder_names = [name for name in os.listdir(script_dir) if re.search(pattern,name)]
+
     print(folder_names)
 
 def create_folders():
